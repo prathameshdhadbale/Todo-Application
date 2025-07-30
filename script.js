@@ -1,4 +1,4 @@
-/* Follow the instructions found in the description to complete the JavaScript functionality.*/
+
 function gettodolist() {
     let string_todolist = localStorage.getItem("todoList");
     let todoList = JSON.parse(string_todolist);
