@@ -12,10 +12,12 @@ function gettodolist() {
 function saveTodoList(todoList) {
     let string_todolist = JSON.stringify(todoList);
     localStorage.setItem("todoList", string_todolist);
+    checkmark() ;
 }
 
 
 let todoItemsContainer = document.getElementById('todoItemsContainer');
+let saveandcheck = document.getElementById("saveandcheck");
 let unique = 4;
 
 let todoList = gettodolist();
@@ -48,6 +50,19 @@ function onStatusChange(checkboxId, labelId, todoId) {
         todoList[indexTodoObj].checked = true;
     }
 }
+
+function checkmark(){
+    let check_mark = document.createElement("i");
+    check_mark.classList.add("fa-solid" , "fa-check");
+    check_mark.style.padding = "15px";
+    check_mark.style.color = "green" ;
+    saveandcheck.appendChild(check_mark);
+
+    setTimeout(()=>{
+        saveandcheck.removeChild(check_mark);
+    },1200);
+}
+
 
 function createandappendtodo(todo) {
     let todoId = "todo" + todo.unique_no;
