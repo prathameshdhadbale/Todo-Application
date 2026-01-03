@@ -41,11 +41,6 @@ Todo-Application/
 ├── style.css
 └── script.js
 
-yaml
-Copy code
-
----
-
 ## 🚀 Getting Started
 
 ### Run Locally
